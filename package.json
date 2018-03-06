@@ -1,0 +1,32 @@
+{
+  "name": "expensify-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wang Maodong",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack-dev-server"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.10",
+    "node-sass": "^4.7.2",
+    "normalize.css": "^8.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-modal": "^3.3.1",
+    "react-router-dom": "^4.2.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "validator": "^9.4.1",
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  }
+}
