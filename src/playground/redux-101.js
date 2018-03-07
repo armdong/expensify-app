@@ -1,5 +1,9 @@
 import { createStore } from 'redux'
 
+/**
+ * Actions
+ */
+
 const incrementCount = ({ incrementBy = 1 } = {}) => ({
   type: 'INCREMENT',
   incrementBy
@@ -10,11 +14,22 @@ const decrementCount = ({ decrementBy = 1 } = {}) => ({
   decrementBy
 })
 
-const resetCount = () => ({ type: 'RESET' })
+const resetCount = () => ({
+  type: 'RESET'
+})
 
-const setCount = ({ count }) => ({ type: 'SET', count })
+const setCount = ({ count }) => ({
+  type: 'SET',
+  count
+})
 
-const store = createStore((state = { count: 0 }, action) => {
+/**
+ * Reducers
+ * 1. Reducers are pure functions
+ * 2. Never change state or action
+ */
+
+const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
       return { count: state.count + action.incrementBy }
@@ -27,7 +42,13 @@ const store = createStore((state = { count: 0 }, action) => {
     default:
       return state
   }
-})
+}
+
+/**
+ * Store
+ */
+
+const store = createStore(countReducer)
 
 store.subscribe(() => {
   console.log(store.getState())
