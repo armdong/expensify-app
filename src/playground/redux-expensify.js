@@ -129,6 +129,14 @@ const getVisibleExpenses = (
       .includes(text.toLowerCase())
 
     return startDateMatch && endDateMatch && textMatch
+  }).sort((a, b) => {
+    switch (sortBy) {
+      case 'amount':
+      return a.amount - b.amount
+      case 'date':
+      default:
+        return a.createdAt - b.createdAt
+    }
   })
 }
 
@@ -154,7 +162,7 @@ const expenseTwo = store.dispatch(addExpense({ description: 'Coffee', amount: 30
 
 // store.dispatch(editExpense(expenseTwo.expense.id, { amount: 500 }))
 
-store.dispatch(setTextFilter('rent'))
+// store.dispatch(setTextFilter('rent'))
 // store.dispatch(setTextFilter())
 
 // store.dispatch(sortByAmount())
