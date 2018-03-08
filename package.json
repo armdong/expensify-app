@@ -5,8 +5,9 @@
   "author": "Wang Maodong",
   "license": "MIT",
   "scripts": {
+    "start": "webpack-dev-server",
     "build": "webpack",
-    "serve": "webpack-dev-server"
+    "test": "jest"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -16,6 +17,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.10",
+    "jest": "^22.4.2",
     "moment": "^2.21.0",
     "node-sass": "^4.7.2",
     "normalize.css": "^8.0.0",
