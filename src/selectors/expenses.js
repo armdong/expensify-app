@@ -14,11 +14,11 @@ const getVisibleExpenses = (
     const createdAtMoment = moment(createdAt)
 
     const startDateMatch = startDate
-      ? startDate.isSameOrBefore(createdAtMoment, 'day')
+      ? moment(startDate).isSameOrBefore(createdAtMoment, 'day')
       : true
 
     const endDateMatch = endDate
-      ? endDate.isSameOrAfter(createdAtMoment, 'day')
+      ? moment(endDate).isSameOrAfter(createdAtMoment, 'day')
       : true
 
     const textMatch = description.toLowerCase()
