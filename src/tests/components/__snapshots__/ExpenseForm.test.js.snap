@@ -1,0 +1,135 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseForm correctly 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value=""
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="number"
+      value=""
+    />
+    <withStyles(SingleDatePicker)
+      block={false}
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1970-01-01T00:00:00.000Z"}
+      disabled={false}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      initialVisibleMonth={null}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      small={false}
+      verticalHeight={null}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Add a note for your expense (optional)"
+      value=""
+    />
+    <button>
+      Add Expense
+    </button>
+  </form>
+</div>
+`;
+
+exports[`should render ExpenseForm correctly with expenses data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      onChange={[Function]}
+      placeholder="Description"
+      type="text"
+      value="Rent"
+    />
+    <input
+      onChange={[Function]}
+      placeholder="Amount"
+      type="number"
+      value="1095"
+    />
+    <withStyles(SingleDatePicker)
+      block={false}
+      customCloseIcon={null}
+      customInputIcon={null}
+      date={"1969-12-28T00:00:00.000Z"}
+      disabled={false}
+      enableOutsideDays={false}
+      firstDayOfWeek={null}
+      focused={false}
+      hideKeyboardShortcutsPanel={false}
+      horizontalMargin={0}
+      initialVisibleMonth={null}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepFocusOnInput={false}
+      keepOpenOnDateSelect={false}
+      navNext={null}
+      navPrev={null}
+      noBorder={false}
+      numberOfMonths={1}
+      onDateChange={[Function]}
+      onFocusChange={[Function]}
+      readOnly={false}
+      regular={false}
+      renderCalendarInfo={null}
+      renderDayContents={null}
+      renderMonth={null}
+      reopenPickerOnClearDate={false}
+      required={false}
+      screenReaderInputMessage=""
+      showClearDate={false}
+      showDefaultInputIcon={false}
+      small={false}
+      verticalHeight={null}
+      withFullScreenPortal={false}
+      withPortal={false}
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Add a note for your expense (optional)"
+      value=""
+    />
+    <button>
+      Add Expense
+    </button>
+  </form>
+</div>
+`;
