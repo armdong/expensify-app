@@ -6,6 +6,8 @@ import expenses from '../fixtures/expenses'
 
 let editExpense, removeExpense, history, wrapper;
 
+const expense = expenses[2]
+
 beforeEach(() => {
   editExpense = jest.fn()
   removeExpense = jest.fn()
@@ -15,7 +17,7 @@ beforeEach(() => {
       editExpense={editExpense}
       removeExpense={removeExpense}
       history={history}
-      expense={expenses[0]}
+      expense={expense}
     />
   )
 })
@@ -29,17 +31,14 @@ test('should handle editExpense', () => {
     note: 'Some new notes',
     amount: 288.50
   }
-  const id = expenses[0].id
 
   wrapper.find(ExpenseForm).prop('onSubmit')(updates)
   expect(history.push).toHaveBeenLastCalledWith('/')
-  expect(editExpense).toHaveBeenLastCalledWith(id, updates)
+  expect(editExpense).toHaveBeenLastCalledWith(expense.id, updates)
 })
 
 test('should handle removeExpense', () => {
-  const id = expenses[0].id
-
   wrapper.find('button').at(0).simulate('click')
   expect(history.push).toHaveBeenLastCalledWith('/')
-  expect(removeExpense).toHaveBeenLastCalledWith({ id })
+  expect(removeExpense).toHaveBeenLastCalledWith({ id: expense.id })
 })
